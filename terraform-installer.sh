@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 set -e
-
+sudo apt install unzip
+mkdir infra
+cd ~/infra
 # TERRAFORM INSTALLER - Automated Terraform Installation
 
 # Uncomment line below to always use 'sudo' to install to /usr/local/bin/
