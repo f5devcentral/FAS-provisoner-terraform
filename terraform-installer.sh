@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-sudo apt install unzip
-mkdir infra
-cd ~/infra
+
 # TERRAFORM INSTALLER - Automated Terraform Installation
 
 # Uncomment line below to always use 'sudo' to install to /usr/local/bin/
@@ -218,4 +216,16 @@ if [[ ! "$cwdInstall" ]]; then
 else
   echo "Terraform Version ${VERSION} downloaded"
 fi
+cd ~/infra
+git clone https://github.com/f5devcentral/FAS-provisoner-terraform.git
+sleep 10
+echo " Changing directory "
+cd FAS-provisoner-terraform
+sleep 10
+echo "Terraform init  "
+terraform init
+sleep 10
+terraform plan
+sleep 10
+terraform apply -auto-approve
 exit 0
