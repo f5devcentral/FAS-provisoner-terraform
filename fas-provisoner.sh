@@ -217,13 +217,23 @@ else
   echo "Terraform Version ${VERSION} downloaded"
 fi
 cd ~/FAS-provisoner-terraform/
-sleep 10
+my_key=""
+ec2_ip=""
 echo "Terraform init  "
 terraform init
-sleep 10
+sleep 1
 echo "Terraform plan"
 terraform plan
-sleep 10
+sleep 1
 echo "Terraform apply "
-#terraform apply -auto-approve
+terraform apply -auto-approve
+terraform output my_key > my_key
+terraform output ec2_ip > ec2_ip
+ip=$(cat ec2_ip)
+key=$(cat my_key)
+sleep 20
+ssh -o StrictHostKeyChecking=no -i $key ubuntu@$ip 'mkdir .aws'
+scp -i $key ~/.aws/config ubuntu@$ip:.aws/config
+rm my_key
+rm ec2_ip
 exit 0
