@@ -233,7 +233,7 @@ ip=$(cat ec2_ip)
 key=$(cat my_key)
 sleep 20
 ssh -o StrictHostKeyChecking=no -i $key ubuntu@$ip 'mkdir .aws'
-scp -i $key ~/.aws/config ubuntu@$ip:.aws/config
+scp -i $key ~/.aws/credentials ubuntu@$ip:.aws/credentials
 scp -i $key terraform.tfvars ubuntu@$ip:terraform.tfvars
 rm my_key
 rm ec2_ip
