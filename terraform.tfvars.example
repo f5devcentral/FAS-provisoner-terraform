@@ -1,0 +1,3 @@
+address  = "${addr}:8443"
+username = "${username}"
+password = "${pwd}"
