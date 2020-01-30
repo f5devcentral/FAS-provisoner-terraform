@@ -8,7 +8,7 @@ resource "aws_instance" "f5" {
   ami = "ami-03ce933a656a420ea"
 
   instance_type               = "m5.xlarge"
-  private_ip                  = "10.0.0.200"
+  private_ip                  = var.private_ip_f5
   associate_public_ip_address = true
   subnet_id                   = module.vpc.public_subnets[0]
   vpc_security_group_ids      = [aws_security_group.f5.id]

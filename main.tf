@@ -22,9 +22,9 @@ data "aws_ami" "ubuntu" {
 data "template_file" "tfvars" {
   template = file("terraform.tfvars.example")
   vars = {
-    addr     = aws_eip.f5.public_ip
-    username = "admin"
-    pwd      = random_string.password.result
+    address     = aws_eip.f5.public_ip
+    username    = "admin"
+    password    = random_string.password.result
   }
 }
 
