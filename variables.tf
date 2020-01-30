@@ -13,8 +13,8 @@ variable "prefix" {
   default     = "student1"
 }
 
-#This is the private IP for the fas ubuntu server, fas is the ubuntu server which will have terraform
-tool configured.
+#This is the private IP for the fas ubuntu server, fas is the ubuntu server which will have terraform tool 
+
 
 variable "private_ip_fas" {
   description = "private ip for fas"
