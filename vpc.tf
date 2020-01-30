@@ -27,26 +27,6 @@ resource "aws_security_group" "fas" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
-    from_port   = 8500
-    to_port     = 8500
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port   = 8300
-    to_port     = 8300
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
-
-  ingress {
-    from_port   = 8301
-    to_port     = 8301
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
 
   egress {
     from_port   = 0
@@ -111,19 +91,6 @@ resource "aws_security_group" "nginx" {
     cidr_blocks = ["10.0.0.0/16"]
   }
 
-  ingress {
-    from_port   = 8300
-    to_port     = 8300
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
-
-  ingress {
-    from_port   = 8301
-    to_port     = 8301
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
 
   egress {
     from_port   = 0
@@ -132,5 +99,3 @@ resource "aws_security_group" "nginx" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-
