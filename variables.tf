@@ -8,9 +8,10 @@ variable "region" {
 
 # This prefix is used for different students, student1, student2 .... will corresponds to different workshops, you can use the configuration for multiple workshop.
 
+# Please assign student ID like student-1, student-2 ....
 variable "prefix" {
   description = "prefix for resources created"
-  default     = "Student-#"
+  default     = 
 }
 
 #This is the private IP for the fas ubuntu server, fas is the ubuntu server which will have terraform tool 
