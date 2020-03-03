@@ -10,7 +10,7 @@ variable "region" {
 
 variable "prefix" {
   description = "prefix for resources created"
-  default     = "STUDENT1"
+  default     = "Student-#"
 }
 
 #This is the private IP for the fas ubuntu server, fas is the ubuntu server which will have terraform tool 
