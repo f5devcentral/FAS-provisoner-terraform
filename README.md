@@ -7,7 +7,7 @@ ubuntu server (Jump box).
 # How to use the Repo ?
 
 1. git clone this repo using ```git clone https://github.com/f5devcentral/FAS-provisoner-terraform.git```
-2. Then change directory ```cd FAS-provisoner-terraform```  and run ``` ./fas-provisoner.sh ``` (This will install terraform as well)
+2. Change directory ```cd FAS-provisoner-terraform```  and run ``` ./fas-provisoner.sh ``` (This will install terraform on your  local machine )
 3. Next you can ssh into the jump box by ```ssh -i terraform-20200507004132597400000001.pem ubuntu@X.X.X.X ```
 4. USe git clone to clone another repo for as3 ``` git clone https://github.com/f5devcentral/f5-as3-usecases.git```
 5. Change directory to ```cd f5-as3-usecases/``` now we are entering into the AS3 Deployment
