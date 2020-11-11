@@ -1,3 +1,4 @@
+Please follow documentation for this lab at https://practice-lab.readthedocs.io/en/latest/class11/class11.html
 # FAS-provisoner-terraform
 - This repository is for deploying infrastructure in AWS Cloud, this will deploy F5 BIG-IP and two NGINX Servers as well one
 ubuntu server (Jump box). 
